@@ -62,8 +62,55 @@ button {
     font-weight: 600;
 }
 
+.section1 {
+    height: 85vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
 
+.banner {
+    height: 80%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #0E1A2D;
+    overflow: hidden;
+}
 
+.banner>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+
+}
+
+.about {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cte-button {
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: rgb(13, 13, 13);
+    border: 1px solid rgba(13, 13, 13, 0.2);
+}
+
+.right-about {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 1.58vw;
+    }
+}
 
 /* Media Queries */
 
