@@ -112,7 +112,7 @@ button {
 }
 
 .section2 {
-    margin-top: 50px;
+    margin-top: 10vw;
     display: grid;
     grid-template-rows: 1fr .5fr;
     height: 80vh;
@@ -131,11 +131,11 @@ button {
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
+        padding: 2vw;
     }
 
     .img1 {
         background-color: #0D1A2D;
-        padding: 2vw;
         color: white;
         display: grid;
         grid-template-rows: 15% 70% 15%;
@@ -190,7 +190,6 @@ button {
     .img2 {
         background: linear-gradient(#0061BF, #4FB0EF);
         position: relative;
-        padding: 2vw;
 
         img {
             position: absolute;
@@ -211,12 +210,13 @@ button {
             padding: 1vw 1.5vw;
             border-radius: 50px;
             font-weight: 100;
+            width: 15vw;
+            text-align: center;
         }
     }
 
     .img3 {
         background-color: #F7F8FC;
-        padding: 2vw;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -236,13 +236,14 @@ button {
             }
 
             h5 {
-                font-size: 1vw;
+                font-size: 1.5vw;
                 font-weight: lighter;
             }
 
             p {
                 width: 90%;
                 color: rgba(13, 13, 13, 0.5);
+
             }
         }
 
@@ -259,11 +260,12 @@ button {
                 gap: 10px;
 
                 h5 {
-                    width: 25%;
+                    width: 30%;
+                    font-size: 1.3vw;
                 }
 
                 .difficulty-level {
-                    width: 50%;
+                    flex: 1;
                     display: flex;
                     justify-content: start;
                     align-items: center;
@@ -277,6 +279,7 @@ button {
                 }
 
                 .difficulty-score {
+                    width: 10%;
                     text-align: right;
                 }
             }
@@ -289,7 +292,7 @@ button {
 /* Media Queries */
 
 /* Small Mobile Responsive */
-@media (max-width: 450px) {
+@media (max-width: 478px) {
 
     .logo {
         font-size: 5vw !important;
@@ -329,6 +332,84 @@ button {
         }
     }
 
+    .section2 {
+
+        .details {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            .img1,
+            img2,
+            img3 {
+                padding: 5vw;
+            }
+
+            .img1 {
+                grid-template-rows: 15% 60% 15%;
+
+                .icon {
+                    font-size: 5vw;
+                }
+
+                .quote {
+                    h2 {
+                        font-size: 5vw;
+                    }
+
+                }
+            }
+
+            .img2 {
+                .badge {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    padding: 1vw 1.5vw;
+                    border-radius: 50px;
+                    font-weight: 100;
+                    font-size: 4vw;
+                }
+            }
+
+            .img3 {
+                div {
+                    h2 {
+                        font-size: 10vw;
+                    }
+
+                    h5 {
+                        font-size: 4vw;
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgba(13, 13, 13, 0.5);
+                    }
+                }
+
+                .difficulty-levels {
+                    .level {
+                        h5 {
+                            width: 40%;
+                        }
+
+                        .difficulty-level {
+                            width: 50%;
+                        }
+
+                        .difficulty-score {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
 }
 
 /* Medium Mobile Responsive */
@@ -336,7 +417,111 @@ button {
 /* Large Mobile Responsive */
 
 /* Tablet Responsive */
-@media (max-width: 1030px) {
+@media (min-width:760px) and (max-width: 770px) {
+    .section2 {
+        .details {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: .6fr;
+
+            .img1,
+            img2,
+            img3 {
+                padding: 1.5vw;
+            }
+
+            .img1 {
+                grid-template-rows: 15% 50% 15%;
+
+                .icon {
+                    font-size: 3vw;
+                }
+
+                .quote {
+                    h2 {
+                        font-size: 1.9vw;
+                    }
+
+                }
+
+                .switch {
+                    .outer {
+                        height: 25px;
+                        width: 50px;
+                        padding: 1px 3px;
+
+                        .inner {
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 50%;
+                            border: 5px solid white;
+                        }
+                    }
+
+                    p {
+                        font-size: 2vw;
+                    }
+                }
+            }
+
+            .img2 {
+                .badge {
+                    padding: 1vw 1vw;
+                    border-radius: 50px;
+                    font-weight: 100;
+                    font-size: 2vw;
+                    width: 22vw;
+                    text-align: center;
+                }
+            }
+
+            .img3 {
+                gap: 30px;
+
+                div {
+                    h2 {
+                        font-size: 3vw;
+                    }
+
+                    h5 {
+                        font-size: 1.2vw;
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgba(13, 13, 13, 0.5);
+                        font-size: 1.4vw;
+                    }
+                }
+
+                .difficulty-levels {
+                    .level {
+                        h5 {
+                            width: 30%;
+                        }
+
+                        .difficulty-level {
+                            flex: 1;
+
+                            .circle {
+                                height: 5px;
+                                width: 5px;
+                                background-color: #31B0FF;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .difficulty-score {
+                            width: 8%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1030px) {
     .logo {
         font-size: 2.5vw;
     }
@@ -361,6 +546,16 @@ button {
 
     .cte-button {
         font-size: 1.5vw;
+    }
+
+    .section2 {
+        .details {
+            .img2 {
+                .badge {
+                    width: 70%;
+                }
+            }
+        }
     }
 }
 
