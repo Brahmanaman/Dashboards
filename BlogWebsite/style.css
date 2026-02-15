@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+:root {
+    --primary-color: #202020;
+    --secondary-color: #F4F7FC;
+    --grey: #a6a6a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair';
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 1.6rem 0;
+}
+
+p {
+    font-weight: 400;
+    margin: 1.6rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+span {
+    color: var(--grey);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    margin: 1.6rem 0;
+    color: var(--grey);
+    font-size: 1.6rem;
+    border-bottom: 2px dotted var(--primary-color);
+}
+
+.site-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: 16px 0;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* Navigation */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu a {
+    border-bottom: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-left: 24px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .mobile-menu {
+        display: initial;
+        font-size: 2.4rem;
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        z-index: 99;
+        display: none;
+    }
+
+    .menu a {
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        display: block;
+    }
+
+    .show {
+        display: block;
+    }
+}
